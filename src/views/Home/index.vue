@@ -8,18 +8,10 @@ import HomePanel from './components/HomePanel.vue';
 </script>
 
 <template>
-    <div class="allContainer">
-        <HomeBanner />
-        <HomeCategory />
-        <HomeNew />
-        <HomeHot />
-        <HomeProduct />
-    </div>
+  <HomeBanner />
+  <HomeCategory />
+  <HomeNew />
+  <HomeHot />
+  <HomeProduct />
 </template>
 
-<style lang="scss" scoped>
-.allContainer {
-  max-width: calc(100% - 360px); 
-  margin: 0 auto; 
-}
-</style>

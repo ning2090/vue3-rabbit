@@ -18,8 +18,18 @@ onMounted(() => {
         <LayoutFixed />
         <LayoutNav />
         <LayoutHeader />
-        <!-- 二级路由出口 -->
-        <RouterView />
+        <div class="allContainer">
+            <!-- 二级路由出口 -->
+            <RouterView />
+        </div>
         <LayoutFooter />
     </div>
 </template>
+
+<style lang="scss" scoped>
+.allContainer {
+  max-width: calc(100% - 360px); 
+  margin: 0 auto; 
+  margin-bottom: 30px;
+}
+</style>

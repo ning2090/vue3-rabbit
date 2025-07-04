@@ -5,7 +5,7 @@
 <template>
     <div class="breadcrumb-wrapper">
         <el-breadcrumb separator="|">
-            <template v-if="true">
+            <template v-if="false">
                 <el-breadcrumb-item><i class="iconfont icon-gerentouxiang"></i><a href="javascript:;">吴</a></el-breadcrumb-item>
                 <el-breadcrumb-item>
                     <el-popconfirm title="确认退出吗？">
@@ -19,7 +19,7 @@
                 <el-breadcrumb-item></el-breadcrumb-item>
             </template>
             <template v-else>
-                <el-breadcrumb-item><a href="javascript:;">请先登录</a></el-breadcrumb-item>
+                <el-breadcrumb-item><a href="javascript:;" @click="$router.push('/login')">请先登录</a></el-breadcrumb-item>
                 <el-breadcrumb-item><a href="javascript:;">帮助中心</a></el-breadcrumb-item>
                 <el-breadcrumb-item><a href="javascript:;">关于我们</a></el-breadcrumb-item>
                 <el-breadcrumb-item></el-breadcrumb-item>

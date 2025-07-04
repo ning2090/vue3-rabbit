@@ -18,6 +18,8 @@ httpInstance.interceptors.request.use(function (config) {
 httpInstance.interceptors.response.use(function (response) {
     return response.data;
 }, function (error) {
+    const message = error.response?.data?.message || '请求失败'
+    ElMessage.error(message)
     return Promise.reject(error);
 });
 

@@ -1,14 +1,22 @@
 <script setup>
+import { useUserStore } from '@/stores/user'
+import { useRouter } from 'vue-router'
 
+const userStore = useUserStore()
+const router = useRouter()
+const confirm = () => {
+    userStore.clearUserInfo()
+    router.push('/login')
+}
 </script>
 
 <template>
     <div class="breadcrumb-wrapper">
         <el-breadcrumb separator="|">
-            <template v-if="false">
-                <el-breadcrumb-item><i class="iconfont icon-gerentouxiang"></i><a href="javascript:;">吴</a></el-breadcrumb-item>
+            <template v-if="userStore.userInfo.token">
+                <el-breadcrumb-item><i class="iconfont icon-user"></i><a href="javascript:;">{{ userStore.userInfo.account }}</a></el-breadcrumb-item>
                 <el-breadcrumb-item>
-                    <el-popconfirm title="确认退出吗？">
+                    <el-popconfirm title="确认退出吗？" @confirm="confirm" confirm-button-text="确认" cancel-button-text="取消">
                         <template #reference>
                             <a href="javascript:;">退出登录</a>
                         </template>
@@ -33,5 +41,10 @@
     display: flex;
     justify-content: flex-end;
     padding: 10px 20px;
+
+    a:hover {
+      color: $xtxColor; 
+    }
+
 }
 </style>

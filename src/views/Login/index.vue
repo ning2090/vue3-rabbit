@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-import { loginAPI } from '@/apis/user'
 import { useRouter } from 'vue-router';
+import { useUserStore } from '@/stores/user'
+
+const userStore = useUserStore()
 
 // 表单校验
 const form = ref({
@@ -40,7 +42,7 @@ const doLogin = () => {
     formRef.value.validate(async(valid) => {
         // valid所有表单都通过校验才为true
         if (valid){
-            const res = await loginAPI({account,password})
+            await userStore.getUserInfo({account,password})
             ElMessage.success('登录成功')
             router.replace({ path:'/' })
         }

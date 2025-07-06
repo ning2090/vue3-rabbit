@@ -1,5 +1,6 @@
 <script setup>
-import {useCategoryStore} from '@/stores/category'
+import {useCategoryStore} from '@/stores/categoryStore'
+import HeaderCart from './HeaderCart.vue';
 const categoryStore = useCategoryStore()
 </script>
 
@@ -17,6 +18,7 @@ const categoryStore = useCategoryStore()
             <div class="search">
                 <input type="text" placeholder="搜一搜">
             </div>
+            <HeaderCart />
         </div>
     </header>
 </template>
@@ -63,6 +65,8 @@ const categoryStore = useCategoryStore()
   }
 
   .search {
+    margin-left: auto;
+    
     input {
       padding: 6px 12px;
       border: 1px solid #ccc;

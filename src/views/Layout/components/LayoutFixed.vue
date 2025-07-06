@@ -1,7 +1,7 @@
 <script setup>
 import { useScroll } from '@vueuse/core'
 import { computed } from 'vue';
-import {useCategoryStore} from '@/stores/category'
+import {useCategoryStore} from '@/stores/categoryStore'
 
 // 获取 scrollY（垂直滚动距离）
 const { y } = useScroll(window)

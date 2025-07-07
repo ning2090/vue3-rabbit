@@ -23,7 +23,7 @@ const confirm = () => {
                     </el-popconfirm>
                 </el-breadcrumb-item>
                 <el-breadcrumb-item><a href="javascript:;">我的订单</a></el-breadcrumb-item>
-                <el-breadcrumb-item><a href="javascript:;">会员中心</a></el-breadcrumb-item>
+                <el-breadcrumb-item><a href="javascript:;" @click="$router.push('/member')">会员中心</a></el-breadcrumb-item>
                 <el-breadcrumb-item></el-breadcrumb-item>
             </template>
             <template v-else>

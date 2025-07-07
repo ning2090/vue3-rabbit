@@ -3,6 +3,8 @@
 Vue3 + Vite + Element Plus + Vue Router + Pinia + sass + axios + VueUse
 优化：图片懒加载
 
+用户:账号：13100000000 密码：123456
+
 ## Project Setup
 
 ```sh
